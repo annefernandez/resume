@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS DAY 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./public/css-d3.css">
+    
+</head>
+<body>
+    <main>
+    <!---
+        <h1>CSS POSITION</h1>
+        <section id="css-position">
+            <div class="grid-container">
+                <div class="grid-item blue active">1</div>
+                <div class="grid-item red">2</div>
+                <div class="grid-item yellow">3</div>
+                <div class="grid-item green">4</div>
+                <div class="grid-item violet">5</div>
+                <div class="grid-item lightblue">6</div>
+                <div class="grid-item lightcyan">7</div>
+                <div class="grid-item red">8</div>
+                <div class="grid-item green">9</div>
+                <div class="grid-item blue">10</div>
+                <div class="grid-item yellow">11</div>
+                <div class="grid-item violet">12</div>
+            </div>
+        </section>
+    
+        
+        <h1>CSS STICKY</h1>
+        <section id="position-sticky">
+            <section id="one" class="sticky">
+                <header class="red">Sticky Navbar</header>
+                <h2>Content one</h2>
+            </section>
+            <section id="two" class="sticky">
+                <header class="blue">Sticky Navbar</header>
+                <h2>Content Two</h2>
+            </section>
+            <section id="three" class="sticky">
+                <header class="green">Sticky Navbar</header>
+                <h2>Content Three</h2>
+            </section>
+        </section>
+    -->    
+
+        
+        <!-- <h1>Flexbox</h1>
+        <section>
+            <div class="flex-between">
+                <div class="flex-item">A</div>
+                <div class="flex-item">B</div>
+                <div class="flex-item">C</div>
+            </div>
+        </section> -->
+        
+        
+       <!-- <section id="flexbox-logo">
+            <div class="flexbox-main">
+                <img src="/public/img/lotus.png" width="150" height="75" alt="logo" class="image-logo">
+                <div class="flexbox-grow">
+                    <h1>Lotus</h1>
+                    <nav>
+                        <ul class="flex-nav">
+                            <li>Home</li>
+                            <li>Services</li>
+                            <li>Contact us</li>
+                        </ul>
+                    </nav>
+                </div>
+                
+            </div>
+       </section> -->
+
+       <section id="grid-layout">
+      
+            <div class="container">
+                
+                <div class="item-1">1</div>
+                <div class="item-2">2</div>
+                <div class="item-3">3</div>
+                <div class="item-4">4</div>
+                <div class="item-5">5</div>
+                <div class="item-6">6</div>
+                <div class="item-7">7</div>
+                <div class="item-8">8</div>
+                
+            </div>
+       </section>
+
+       <section id="grid-layout-area">
+        <div class="container-area"> 
+            <div class="area-1">Header</div>
+            <div class="area-2">Blog</div>
+            <div class="area-3">Main</div>
+            <div class="area-4">Sides</div>
+            <div class="area-5">Footer</div>
+        </div>
+   </section>
+       
+
+    </main>
+</body>
+</html>
+
+<style>
+
+section#grid-layout{
+        display: flex;
+        justify-content: center;
+        height:100vh;
+        align-items: center;
+
+        .item-3{
+            background-color: rgb(245, 208, 238);
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            
+        }
+        
+        .item-1{
+            background-color: rgb(236, 197, 224);
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+          
+        }
+        
+        .item-2{
+            background-color: rgb(243, 210, 237);
+            grid-column-start: 2;
+            grid-row-end: 2;
+            grid-row-start: 1;
+            grid-column-end: 4;
+        }
+        
+        .item-4{
+            background-color: rgb(245, 189, 237);
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        
+        .item-5{
+            background-color: rgb(245, 191, 240);
+        }
+        
+        .item-6{
+            background-color: rgb(242, 181, 218);
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        
+        .item-7{
+            background-color: rgb(237, 190, 219);
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 3;
+        }
+        
+        .item-8{
+            background-color: rgb(244, 196, 237);
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 3;
+
+}
+
+
+}
+.container{
+    width:80%;
+    height: 30%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+
+}
+
+section#grid-layout-area{
+   
+   display: flex;
+   justify-content: center;
+   height: 50vh;;
+   align-items: center;
+}
+.container-area {
+   width: 60vw;
+   column-gap: 10px;
+   row-gap: 10px;
+   height: 100%;
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   grid-template-rows: repeat(6, 1fr);
+   grid-template-areas:
+     "area-1 area-1 area-1 area-1 area-1"
+     "area-2 area-3 area-3 area-3 area-4"
+     "area-2 area-3 area-3 area-3 area-4"
+     "area-2 area-3 area-3 area-3 area-4"
+     "area-2 area-3 area-3 area-3 area-4"
+     "area-5 area-5 area-5 area-5 area-4";
+ }
+
+.area-1{
+   text-align: center;
+   background-color: rgb(215, 209, 243);
+   grid-area: area-1;
+   border-radius: 1rem;
+}
+.area-2{
+   text-align: center;
+   background-color: rgb(223, 192, 239);
+   grid-area: area-2;
+   border-radius: 1rem;
+}
+.area-3{
+   text-align: center;
+   background-color: rgb(231, 208, 242);
+   grid-area: area-3;
+   border-radius: 1rem;
+}
+.area-4{
+   text-align: center;
+   background-color: rgb(212, 191, 246);
+   grid-area: area-4;
+   border-radius: 1rem;
+}
+.area-5{
+   text-align: center;
+   background-color: rgb(210, 189, 226);
+   grid-area: area-5;
+   border-radius: 1rem;
+}
+
+</style>
